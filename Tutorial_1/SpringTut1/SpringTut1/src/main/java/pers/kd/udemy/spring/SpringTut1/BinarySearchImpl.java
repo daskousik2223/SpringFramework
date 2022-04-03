@@ -9,10 +9,18 @@ public class BinarySearchImpl {
 	@Autowired
 	private SortAlgorithm sortAlgorithm;
 	
-	public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
-		super();
-		this.sortAlgorithm = sortAlgorithm;
-	}
+	//Constructor autowiring
+	/*
+	 * public BinarySearchImpl(SortAlgorithm sortAlgorithm) { super();
+	 * this.sortAlgorithm = sortAlgorithm; }
+	 */
+	
+	//Setter autowiring. Even if the setter method is not defined, autowiring by setter is invoked.
+	/*
+	 * public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
+	 * this.sortAlgorithm = sortAlgorithm; }
+	 */
+	
 
 	public int binarySearch(int [] numbers, int number) {
 		
@@ -21,5 +29,7 @@ public class BinarySearchImpl {
 		System.out.println("################### Sort algoritm is : " + sortAlgorithm);
 		return 3;
 	}
+
+
 
 }
