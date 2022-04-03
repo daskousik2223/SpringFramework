@@ -1,4 +1,4 @@
-package pers.kd.udemy.spring.SpringTut1;
+package pers.kd.udemy.spring.SpringTut1.basic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

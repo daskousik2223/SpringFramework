@@ -1,12 +1,14 @@
-package pers.kd.udemy.spring.SpringTut1;
+package pers.kd.udemy.spring.SpringTut1.basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BinarySearchImpl {
 	
 	@Autowired
+	@Qualifier("quick")
 	private SortAlgorithm sortAlgorithm;
 	
 	//Constructor autowiring
@@ -28,6 +30,7 @@ public class BinarySearchImpl {
 		
 		System.out.println("################### Sort algoritm is : " + sortAlgorithm);
 		return 3;
+		
 	}
 
 
