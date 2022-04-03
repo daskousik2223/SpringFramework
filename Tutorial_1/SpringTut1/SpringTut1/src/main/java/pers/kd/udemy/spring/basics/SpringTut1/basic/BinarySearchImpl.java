@@ -1,4 +1,4 @@
-package pers.kd.udemy.spring.SpringTut1.basic;
+package pers.kd.udemy.spring.basics.SpringTut1.basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
