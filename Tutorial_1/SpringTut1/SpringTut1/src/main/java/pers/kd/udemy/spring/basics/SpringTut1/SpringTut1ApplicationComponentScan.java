@@ -5,10 +5,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 import pers.kd.udemy.spring.basics.SpringTut1.scope.PersonDAO;
+import pers.kd.udemy.spring.componentscan.ComponentDAO;
 
 @SpringBootApplication
+@ComponentScan("pers.kd.udemy.spring.componentscan")
 public class SpringTut1ApplicationComponentScan {
 
 	private static Logger LOGGER = LoggerFactory.getLogger(SpringTut1ApplicationComponentScan.class);
@@ -17,13 +20,11 @@ public class SpringTut1ApplicationComponentScan {
 		
 		ApplicationContext appContext = SpringApplication.run(SpringTut1ApplicationComponentScan.class, args);
 		
-		PersonDAO personDAO = appContext.getBean(PersonDAO.class);
-		PersonDAO personDAO2 = appContext.getBean(PersonDAO.class);
+		ComponentDAO componentDAO = appContext.getBean(ComponentDAO.class);
 		
-		LOGGER.info("{}", personDAO);
-		LOGGER.info("{}", personDAO.getJdbcConnection());
-		LOGGER.info("{}", personDAO2);
-		LOGGER.info("{}", personDAO2.getJdbcConnection());
+		LOGGER.info("{}", componentDAO);
+		LOGGER.info("{}", componentDAO.getJdbcConnection());
+
 
 	}
 
