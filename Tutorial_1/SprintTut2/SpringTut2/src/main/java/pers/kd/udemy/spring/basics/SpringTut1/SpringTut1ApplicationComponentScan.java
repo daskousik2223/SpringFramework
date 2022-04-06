@@ -2,15 +2,14 @@ package pers.kd.udemy.spring.basics.SpringTut1;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-import pers.kd.udemy.spring.basics.SpringTut1.scope.PersonDAO;
 import pers.kd.udemy.spring.componentscan.ComponentDAO;
 
-@SpringBootApplication
+@Configuration
 @ComponentScan("pers.kd.udemy.spring.componentscan")
 public class SpringTut1ApplicationComponentScan {
 
@@ -18,7 +17,7 @@ public class SpringTut1ApplicationComponentScan {
 	
 	public static void main(String[] args) {
 		
-		ApplicationContext appContext = SpringApplication.run(SpringTut1ApplicationComponentScan.class, args);
+		ApplicationContext appContext = new AnnotationConfigApplicationContext(SpringTut1ApplicationComponentScan.class);
 		
 		ComponentDAO componentDAO = appContext.getBean(ComponentDAO.class);
 		
