@@ -29,7 +29,7 @@ public class BinarySearchImpl {
 		int sortedNumbers[] = sortAlgorithm.sort(numbers);
 		
 		System.out.println("################### Sort algoritm is : " + sortAlgorithm);
-		return 5;
+		return 3;
 		
 	}
 
